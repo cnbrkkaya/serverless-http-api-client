@@ -8,6 +8,7 @@ import { useNotesContext } from '../../hooks/useNotesContext'
 
 export default function MainPage() {
   const { notes } = useNotesContext()
+
   return (
     <div className='w-3/12'>
       <Link to='/create'>
