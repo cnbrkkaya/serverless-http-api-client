@@ -1,7 +1,13 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 //components
+import Note from '../../components/Note/Note'
+import Pagination from '../../components/Pagination/Pagination'
+//useContext
+import { useNotesContext } from '../../hooks/useNotesContext'
 
 export default function MainPage() {
+  const { notes } = useNotesContext()
   return (
     <div className='w-3/12'>
       <Link to='/create'>
@@ -13,9 +19,9 @@ export default function MainPage() {
           </span>
         </button>
       </Link>
-      {/* {bookmarks.length > 0 && (
-        <Pagination data={bookmarks} RenderComponent={Bookmark} dataLimit={3} />
-      )} */}
+      {notes.length > 0 && (
+        <Pagination data={notes} RenderComponent={Note} dataLimit={3} />
+      )}
     </div>
   )
 }

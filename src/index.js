@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals'
 //Amplify init
 import { Amplify } from 'aws-amplify'
 import awsExports from './aws-exports'
+//Contexts
+import NotesContextProvider from './contexts/NotesContext'
 
 Amplify.configure({
   ...awsExports,
@@ -22,7 +24,9 @@ Amplify.configure({
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App />
+    <NotesContextProvider>
+      <App />
+    </NotesContextProvider>
   </React.StrictMode>
 )
 
