@@ -15,11 +15,8 @@ export default function Navbar() {
           </div>
           {/* SHOPPING CART */}
           <div className='md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0'>
-            <span className='inline-flex rounded-md'>ServerlessGuru/</span>
-            <span className='inline-flex rounded-md'>
-              Serverless Developer/
-            </span>
-            <span className='inline-flex rounded-md'>CodeChallange/</span>
+            <span className='inline-flex rounded-md'>Full Stack/</span>
+            <span className='inline-flex rounded-md'>Note App/</span>
             <span className='inline-flex rounded-md'>Canberk Kaya</span>
           </div>
         </nav>
